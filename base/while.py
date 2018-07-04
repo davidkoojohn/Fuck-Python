@@ -26,3 +26,6 @@ while True:
 print('counter %d times' % counter)
 if counter > 7:
   print('U foolish!')
+
+# break
+# continue
