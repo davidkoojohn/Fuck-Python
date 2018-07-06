@@ -41,6 +41,22 @@ def main():
   list1.clear()
   print(list1)
 
+  # list 切片操作
+  fruits = ['grape', 'apple', 'strawberry', 'berry']
+  fruits += ['pit', 'pear', 'mango']
+
+  for fruit in fruits:
+    print(fruit)
+
+  print(fruits)
+  print(fruits[1:4])
+
+  print(fruits[:])
+
+  print(fruits[-3:-1])
+
+  print(fruits[::-1])
+
   pass
 
 if __name__ == '__main__':
