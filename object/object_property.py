@@ -2,7 +2,7 @@
 
 class Person(object):
   # 限定Person对象只能绑定_name, _age和_gender属性
-  __slots__ = ('_name', '_age', '_gender')
+  # __slots__ = ('_name', '_age', '_gender')
 
   def __init__(self, name, age):
     self._name = name
@@ -31,6 +31,26 @@ class Person(object):
 
     # print(self._gender)
 
+class Student(Person):
+  def __init__(self, name, age, grade):
+    super().__init__(name, age)
+    self._grade = grade
+
+  @property
+  def grade(self):
+    return self._grade
+
+  @grade.setter
+  def grade(self, grade):
+    self._grade = grade
+
+  def study(self, course):
+    print('%s的%s正在学习%s.' % (self._grade, self._name, course))
+
+  def play(self):
+    print(self.age)
+
+
 def main():
 
   person = Person('koo', 13)
@@ -42,7 +62,9 @@ def main():
 
   # person._is_gay = True
 
-
+  stu = Student('kooooo', 17, 'san')
+  stu.study('k')
+  stu.play()
 
   pass
 
