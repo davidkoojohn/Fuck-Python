@@ -1,6 +1,9 @@
 # coding=utf-8
 
 class Person(object):
+  # 限定Person对象只能绑定_name, _age和_gender属性
+  __slots__ = ('_name', '_age', '_gender')
+
   def __init__(self, name, age):
     self._name = name
     self._age = age
@@ -26,7 +29,7 @@ class Person(object):
     else:
       print('%s play doudizhu' % self._name)
 
-
+    # print(self._gender)
 
 def main():
 
@@ -34,6 +37,12 @@ def main():
   person.play()
   person.age = 23
   person.play()
+  # person.name = 'hi'
+  # person._gender = 'sex'
+
+  # person._is_gay = True
+
+
 
   pass
 
