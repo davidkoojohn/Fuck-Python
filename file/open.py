@@ -13,18 +13,23 @@ def main():
 
   f = None
   try:
+    """
     f = open('./test.txt', 'r', encoding='utf-8')
     print(f.read())
+    """
+    with open('/Users/admin/test.txt', 'r', encoding='utf-8') as f:
+      print(f.close())
   except FileNotFoundError:
     print('无法代开指定的文件')
   except LookupError:
     print('指定了未知的编码')
   except UnicodeDecodeError:
     print('读取文件时解码错误')
+  """
   finally:
     if f:
       f.close()
-
+  """
 
 
   pass
