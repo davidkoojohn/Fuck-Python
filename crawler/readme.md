@@ -37,5 +37,15 @@ Disallow:  /
 6. 对链接进行进一步的处理（获取页面并重复上面的动作）。
 7. 将有用的信息进行持久化以备后续的处理。
 
+## about pages
+
+* 下载数据 - urllib / requests / aiohttp
+* 解析数据 - re / lxml / beautifulsoup4（bs4）/ pyquery
+* 缓存和持久化 - pymysql / sqlalchemy / peewee/ redis / pymongo
+* 生成数字签名 - hashlib
+* 序列化和压缩 - pickle / json / zlib
+* 调度器 - 进程（multiprocessing） / 线程（threading） / 协程（coroutine）
+
+
 
 
