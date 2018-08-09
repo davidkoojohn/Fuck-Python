@@ -55,6 +55,15 @@ $ python3 -m pip list -o
 
 * [数据结构 & 数据类型](./note/data-structure.md)
 
+## mysql-note
+
+```
+mysql> desc users;
+mysql> show index from users;
+# 看看表是如何创建的
+mysql> show create table users\G;
+```
+
 ## 参考
 
 * [Python Dev](http://sourabhbajaj.com/mac-setup/Python/)
