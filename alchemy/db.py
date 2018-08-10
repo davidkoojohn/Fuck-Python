@@ -19,9 +19,20 @@ class User(Base):
     email = Column(String(64), nullable=False, index=True)
     # articles = relationship('Article')
     articles = relationship('Article', backref='author')
+    userinfo = relationship('UserInfo', backref='user', uselist=False)
 
     def __repr__(self):
         return '%s(%r)' % (self.__class__.__name__, self.username)
+
+class UserInfo(Base):
+    __tablename__ = 'userinfos'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(64))
+    qq = Column(String(11))
+    phone = Column(String(11))
+    link = Column(String(64))
+    user_id = Column(Integer, ForeignKey('users.id'))
+
 
 class Article(Base):
 
