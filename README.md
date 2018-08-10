@@ -62,6 +62,9 @@ mysql> desc users;
 mysql> show index from users;
 # 看看表是如何创建的
 mysql> show create table users\G;
+
+# 存在关系数据表时删除报错，因为互相依赖
+mysql> drop table users;
 ```
 
 ## 参考
