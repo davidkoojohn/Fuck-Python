@@ -22,6 +22,26 @@ $ pyenv global 2.7.12 3.5.2
 $ pyenv rehash
 ```
 
+## venv
+
+```
+# 创建虚拟环境
+$ python3 -m venv venv
+# 激活虚拟环境
+$ source venv/bin/activate
+# 退出虚拟环境
+$ deactivate
+
+# 更新包管理工具pip
+(venv)$ python -m pip install --upgrade pip
+
+# 生成requirements.txt
+(venv)$ pip freeze > requirements.txt
+
+# 安装requirements.txt依赖
+(venv)$ pip install -r requirements.txt
+```
+
 # pip
 
 ```
