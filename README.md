@@ -7,15 +7,7 @@ $ cd "$(brew --repo)" && git remote set-url origin https://git.coding.net/homebr
 $ cd $home
 ```
 
-# install python
-
-```
-$ brew install python
-
-$ pip install --upgrade pip
-```
-
-## Pyenv method
+## pyenv method
 
 ```
 $ brew install pyenv
@@ -49,22 +41,6 @@ $ python3 -m pip show
 $ python3 -m pip show -f packagename
 $ python3 -m pip list
 $ python3 -m pip list -o
-```
-
-## note
-
-* [数据结构 & 数据类型](./note/data-structure.md)
-
-## mysql-note
-
-```
-mysql> desc users;
-mysql> show index from users;
-# 看看表是如何创建的
-mysql> show create table users\G;
-
-# 存在关系数据表时删除报错，因为互相依赖
-mysql> drop table users;
 ```
 
 ## 参考
